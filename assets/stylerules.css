@@ -1,0 +1,97 @@
+body{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+}
+
+header {
+ text-align: center;
+ color: #000080;
+ height: 50px;
+ box-shadow: 0 10px 10px 0 rgb(0, 0, 0, .3);
+ top: 0; 
+ position: fixed;
+ z-index: 99;
+ width: 100%;
+ height: 12vh;
+ background-color: white;
+}
+
+main {
+  margin-top: 15vh;
+  min-height: 90vh;
+  min-width: 100%;
+  margin-bottom: 5vh;
+}
+
+.auth-form {
+   color: #000080;
+   padding-top: 15px;
+   text-align: center;
+   margin: 0 auto;
+   min-height: 400px;
+   width: 600px;
+   border-radius: 25px;
+   box-shadow: 0 10px 10px 0 rgb(0, 0, 0, .3);
+   padding-bottom: 20px;
+}
+
+.auth-form .form {
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+
+.auth-form i {
+ font-size: 15px;
+}
+
+input {
+ border: none;
+ border-bottom: solid 2px #000080;
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-size: large;
+}
+
+.required, #error {
+ color: red;
+}
+
+button {
+ margin-top: 20px;
+ background-color: #000080;
+ color: white;
+ min-width: 150px;
+ height: 40px;
+ font-size: 20px;
+ border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #606080;
+}
+
+footer {
+ text-align: center;
+ color: #000080;
+ border-top: solid 2px gray;
+}
+
+#clock {
+ position: fixed;
+ bottom: 0px;
+ padding-top: 10px;
+ text-align: center;
+ background-color: lightgray;
+ height: 120px;
+ width: 150px;
+ z-index: 80;
+}
+
+@media only screen and (max-width: 730px) {
+ .auth-form {
+	width: 100%;
+ }
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="Youngstars, foundation, multichoice, question">
+    <meta name="author" content="Samson Samuel">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MSQ: Youngstars</title>
+    <!-- Favicon -->
+	<!--	<link rel="shortcut icon" type="image/icon" href="assets/images/favicon.png"/> -->
+    <!-- Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Css Rules -->
+	<link rel="stylesheet" href="assets/stylerules.css">
+   </head>
+  <body>
+  	<header>
+	    <h1><span class="material-icons">star</span> YoungStars - M.S.Q.</h1>
+	    </br>
+  	</header>
+	<main id="main">
+		<div class="auth-form">
+		    <span>Assessment Profile <i class="material-icons">create</i></span>
+		    <h1>Sign Up</h1>
+		    <div id="error"></div>
+		    <div class="form">
+			    <input type="email" id="email" placeholder="Enter Your Email"/><span class="required">*</span></br>
+			    <input type="email" id="first_name" placeholder="Enter First Name"/><span class="required">*</span></br>
+			    <input type="email" id="last_name" placeholder="Enter Last Name"/><span class="required">*</span></br>
+			    <button onClick="resetPassword();">Sign Up</button>
+		    </div>
+		    <p><a href="#" onClick="toggleForm('signInForm');">Sign into my account</a></p>
+		    <p><a href="#" onClick="toggleForm('resetPasswordForm');">Forgot password?</a></p>
+		<div>
+        </main>
+        <footer>
+	    <div id="clock">
+	        <p>Timer:</p>
+		<h3 id="timer">29mins: 50s</h3></p>
+            </div>
+	    <div id="copyright">
+		<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved @torsami77</p>
+            </div>
+        </footer> 
+    <!-- Imports js -->
+	<script type="text/javascript" src="assets/js/auth-forms.js"></script>
+  </body>
+</html>
