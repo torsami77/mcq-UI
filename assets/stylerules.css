@@ -16,6 +16,17 @@ header {
  background-color: white;
 }
 
+#user {
+  margin-top: 2vh;
+  float: right;
+  cursor: pointer;
+  margin-right: 20vw;
+}
+
+.pro-pic {
+  height: 25px;
+}
+
 main {
   margin-top: 15vh;
   min-height: 90vh;
@@ -23,7 +34,7 @@ main {
   margin-bottom: 5vh;
 }
 
-.auth-form {
+.auth-form, .assessments {
    color: #000080;
    padding-top: 15px;
    text-align: center;
@@ -33,6 +44,12 @@ main {
    border-radius: 25px;
    box-shadow: 0 10px 10px 0 rgb(0, 0, 0, .3);
    padding-bottom: 20px;
+}
+
+.assessments {
+  width: 70vw;
+  padding: 3vw;
+  padding-bottom: 10vh;
 }
 
 .auth-form .form {
@@ -53,8 +70,12 @@ input {
  font-size: large;
 }
 
-.required, #error {
- color: red;
+.required, #errors {
+ color: red !important;
+}
+
+.success-message {
+  color: darkgreen;
 }
 
 button {
@@ -65,6 +86,11 @@ button {
  height: 40px;
  font-size: 20px;
  border-radius: 8px;
+}
+
+.instructions {
+  margin: 0 auto;
+  width: 400px;
 }
 
 button:hover {
@@ -87,11 +113,43 @@ footer {
  height: 120px;
  width: 150px;
  z-index: 80;
+ display: none;
+}
+
+#time_ux {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 81;
+  height: 130px;
+  width: 145px;
+  display: none;
+}
+
+#timer_alert {
+  z-index: 100;
+  position: fixed;
+  background-color: #dddddddd;
+  height: 100vh;
+  width: 99.9%;
+  top: 0;
+  padding-top: 20vh;
+  text-align: center;
+  color: red;
+  display: none;
 }
 
 @media only screen and (max-width: 730px) {
- .auth-form {
-	width: 100%;
- }
+  .auth-form, .assessments {
+	  width: 100%;
+  }
+
+  #user {
+    margin-right: 5vw;
+  }
+
+  .instructions {
+    width: 80%;
+  }
 }
 
