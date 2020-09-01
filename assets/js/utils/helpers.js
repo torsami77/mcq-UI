@@ -55,16 +55,14 @@ const sec = () => {
   }, 1000);
 }
 
-let submitted_is_true;
 const min = () => {
-  let duration = 9;
+  let duration = 1;
   return setInterval(() => {
     duration -= 1;
-    if(duration <= 5){
+    if(duration <= 5 && duration >= 0){
       document.querySelector('#clock').style.color = 'red';
-	if(submitted_is_true === false){
           document.querySelector('#time_ux').style.display = 'block';
-	}
+
     }
     if(duration < 0){
       document.querySelector('#time_ux').style.display = 'none';
@@ -81,7 +79,6 @@ const min = () => {
 
 let submitAssessment = () => {
   //score computation
-  submitted_is_true = true
   document.getElementById('time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
   document.querySelector('#assessments').innerHTML = submitted;
