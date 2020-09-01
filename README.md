@@ -1,7 +1,7 @@
 # mcq-UI
 User Interface - for MCQ-Backend (API): https://quick-mcq-backend.herokuapp.com/
 
-###See Stagged App Here: 
+### See Stagged App Here: 
 https://mcq-ui.netlify.app/
 ___
 ### TECHNOLOGY USED
