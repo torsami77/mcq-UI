@@ -72,6 +72,7 @@ const min = () => {
       document.querySelector('#clock').style.display = 'none';
       if(is_submitted != true){
         document.querySelector('#timer_alert').style.display = 'block';
+        document.querySelector('#time_ux').style.display = 'none';
       }
       clearInterval(sec_count);
       return clearInterval(min)
@@ -92,6 +93,8 @@ let submitAssessment = () => {
 };
 
 const startTiming = () => {
+  document.querySelector('#clock').style.color = '#000080';
+  document.getElementById('time_ux').style.display = 'none';
 	is_submitted = false;
   setTimeout(submitAssessment, 60000 * 10);
   document.getElementById('clock').style.display = 'block';
