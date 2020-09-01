@@ -56,7 +56,7 @@ const sec = () => {
 }
 
 const min = () => {
-  let duration = 1;
+  let duration = 9;
   return setInterval(() => {
     duration -= 1;
     if(duration <= 5 && duration >= 0){
