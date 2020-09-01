@@ -61,8 +61,9 @@ const min = () => {
     duration -= 1;
     if(duration <= 5 && duration >= 0){
       document.querySelector('#clock').style.color = 'red';
-          document.querySelector('#time_ux').style.display = 'block';
-
+      document.querySelector('#time_ux').style.display = 'block';
+    }else{
+      document.getElementById('time_ux').style.display = 'none';
     }
     if(duration < 0){
       document.querySelector('#time_ux').style.display = 'none';
