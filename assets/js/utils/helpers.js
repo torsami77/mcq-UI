@@ -60,7 +60,7 @@ const min = () => {
   let duration = 9;
   return setInterval(() => {
     duration -= 1;
-    if(duration <= 5 && duration >= 0){
+    if(duration <= 5 && duration >= 0 && is_submitted != true){
       document.querySelector('#clock').style.color = 'red';
       document.querySelector('#time_ux').style.display = 'block';
     }else{
@@ -85,6 +85,8 @@ const min = () => {
 
 let submitAssessment = () => {
   //score computation
+  clearInterval(sec_count);
+  clearInterval(min);
   is_submitted = true;
   document.getElementById('time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
