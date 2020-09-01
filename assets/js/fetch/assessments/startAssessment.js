@@ -35,6 +35,7 @@ const startAssessments = () => {
         i += 1;
     })
 
+
     document.getElementById("main").innerHTML = `
     <div id="timer_alert">
         <div>
@@ -45,7 +46,9 @@ const startAssessments = () => {
     </div>
     <div class="assessments" id="assessments">
         ${exams}
-        <button onClick="submitAssessment();">Submit</button>
+	<div id="buttons">
+        	<button onClick="document.getElementById('buttons').innerHTML = confirmation">Submit</button>
+	</div>
     <div>
     `;
 

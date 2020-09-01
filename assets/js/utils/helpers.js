@@ -80,6 +80,7 @@ let submitAssessment = () => {
   //score computation
   clearInterval(sec_count);
   clearInterval(min)
+  document.querySelector('#timer_alert').style.display = 'none';
   document.querySelector('#time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
   document.querySelector('#assessments').innerHTML = submitted;
@@ -96,3 +97,11 @@ const startTiming = () => {
   sec();
   min();
 }
+
+const submitButton = `<button onClick="document.getElementById('buttons').innerHTML = confirmation">Submit</button>`;
+
+const confirmation = `
+<h3>Are you sure you want to submit?</h3>
+<button onClick="submitAssessment();">Yes</button>&nbsp;&nbsp;
+<button onClick="document.getElementById('buttons').innerHTML = submitButton">No</button>
+`;
