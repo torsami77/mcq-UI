@@ -2,7 +2,7 @@ const IS_DEV_MODE = false;
 // eslint-disable-next-line no-unused-vars
 const host = IS_DEV_MODE
   ? 'http://localhost:3000'
- : 'https://cors-torsami77.herokuapp.com/https://mcq-backend.herokuapp.com';
+ : 'https://cors-torsami77.herokuapp.com/quick-mcq-backend.herokuapp.com/';
  
  const toggleVisibility = () => {
     if(document.getElementById("visibility").innerHTML === "visibility"){
