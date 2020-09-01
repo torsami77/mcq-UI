@@ -1,8 +1,8 @@
-# msq-UI
-User Interface - for MSQ-Backend (API): https://quick-mcq-backend.herokuapp.com/
+# mcq-UI
+User Interface - for MCQ-Backend (API): https://quick-mcq-backend.herokuapp.com/
 
 ###See Stagged App Here: 
-https://msq-ui.netlify.app/
+https://mcq-ui.netlify.app/
 ___
 ### TECHNOLOGY USED
 + Front End: HTML, CSS, Vanilla JavaScript,
@@ -29,4 +29,5 @@ ___
 	- Sum each correct answer by 5 points to compute 75 passing mark
 	- Passed and failed score UX
 ___
-#Thanks
+
+# Thanks
