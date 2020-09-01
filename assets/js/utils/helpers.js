@@ -55,13 +55,16 @@ const sec = () => {
   }, 1000);
 }
 
+let submitted_is_true;
 const min = () => {
   let duration = 9;
   return setInterval(() => {
     duration -= 1;
     if(duration <= 5){
       document.querySelector('#clock').style.color = 'red';
-      document.querySelector('#time_ux').style.display = 'block';
+	if(submitted_is_true === false){
+          document.querySelector('#time_ux').style.display = 'block';
+	}
     }
     if(duration < 0){
       document.querySelector('#time_ux').style.display = 'none';
@@ -78,14 +81,15 @@ const min = () => {
 
 let submitAssessment = () => {
   //score computation
-  
-  document.querySelector('#time_ux').style.display = 'none';
+  submitted_is_true = true
+  document.getElementById('time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
   document.querySelector('#assessments').innerHTML = submitted;
  return false;
 };
 
 const startTiming = () => {
+	
   setTimeout(submitAssessment, 60000 * 10);
   document.getElementById('clock').style.display = 'block';
   document.getElementById('clock').innerHTML = `
@@ -99,7 +103,7 @@ const startTiming = () => {
 const submitButton = `<button onClick="document.getElementById('buttons').innerHTML = confirmation">Submit</button>`;
 
 const confirmation = `
-<h3>Are you sure you want to submit?</h3>
-<button onClick="submitAssessment();">Yes</button>&nbsp;&nbsp;
-<button onClick="document.getElementById('buttons').innerHTML = submitButton">No</button>
+  <h3>Are you sure you want to submit?</h3>
+  <button onClick="submitAssessment();">Yes</button>&nbsp;&nbsp;
+  <button onClick="document.getElementById('buttons').innerHTML = submitButton">No</button>
 `;
