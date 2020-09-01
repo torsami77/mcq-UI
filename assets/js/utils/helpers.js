@@ -78,9 +78,7 @@ const min = () => {
 
 let submitAssessment = () => {
   //score computation
-  clearInterval(sec_count);
-  clearInterval(min)
-  document.querySelector('#timer_alert').style.display = 'none';
+  
   document.querySelector('#time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
   document.querySelector('#assessments').innerHTML = submitted;
