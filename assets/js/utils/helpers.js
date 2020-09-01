@@ -55,6 +55,7 @@ const sec = () => {
   }, 1000);
 }
 
+
 const min = () => {
   let duration = 9;
   return setInterval(() => {
@@ -63,12 +64,15 @@ const min = () => {
       document.querySelector('#clock').style.color = 'red';
       document.querySelector('#time_ux').style.display = 'block';
     }else{
+      document.querySelector('#clock').style.color = '#000080';
       document.getElementById('time_ux').style.display = 'none';
     }
     if(duration < 0){
       document.querySelector('#time_ux').style.display = 'none';
       document.querySelector('#clock').style.display = 'none';
-      document.querySelector('#timer_alert').style.display = 'block';
+      if(is_submitted != true){
+        document.querySelector('#timer_alert').style.display = 'block';
+      }
       clearInterval(sec_count);
       return clearInterval(min)
     }
@@ -80,6 +84,7 @@ const min = () => {
 
 let submitAssessment = () => {
   //score computation
+  is_submitted = true;
   document.getElementById('time_ux').style.display = 'none';
   document.querySelector('#clock').style.display = 'none';
   document.querySelector('#assessments').innerHTML = submitted;
@@ -87,7 +92,7 @@ let submitAssessment = () => {
 };
 
 const startTiming = () => {
-	
+	is_submitted = false;
   setTimeout(submitAssessment, 60000 * 10);
   document.getElementById('clock').style.display = 'block';
   document.getElementById('clock').innerHTML = `
